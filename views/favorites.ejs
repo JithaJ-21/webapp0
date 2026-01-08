@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Favorites</title>
+</head>
+<body>
+
+<h1>My Favorite Resources ❤️</h1>
+
+<a href="/browse">⬅ Back to Browse</a>
+
+<ul>
+    <% if (favorites.length === 0) { %>
+        <li>No favorites added yet.</li>
+    <% } %>
+
+    <% favorites.forEach(fav => { %>
+        <li>
+            <strong><%= fav.title %></strong>
+            (<%= fav.type %>) by <%= fav.author %>
+        </li>
+    <% }); %>
+</ul>
+
+</body>
+</html>
